@@ -1,2 +1,17 @@
-# generalized-models-nonparametric-regression
-Advanced statistical modeling in R, covering GLMs, logistic regression, nonparametric regression, smoothing splines, GAMs, and ethical considerations in statistical modeling.
+# Generalized Models & Nonparametric Regression
+
+This repository contains projects, coding assignments, exercises, and notes from the final course in the Statistical Modeling for Data Science program at the University of Colorado at Boulder.
+
+## Topics
+
+* Generalized Linear Models (GLMs)
+* Logistic Regression
+* Binary Classification
+* Nonparametric Regression
+* Kernel Estimators
+* Smoothing Splines
+* Generalized Additive Models (GAMs)
+* Model Interpretation
+* Model Selection and Evaluation
+* Ethical Considerations in Statistical Modeling
+
