@@ -8739,38 +8739,45 @@ Predicted  0  1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Evaluation-of-Test-set-Predictions">Evaluation of Test-set Predictions<a class="anchor-link" href="#Evaluation-of-Test-set-Predictions">¶</a></h3><table>
+<h3 id="Answers">Answers<a class="anchor-link" href="#Answers">¶</a></h3><ol>
+<li><p>Accuracy can be misleading when the classes are imbalanced. For example, if only $5%$ of patients have diabetes, a model that predicts "no diabetes" for everyone would have $95%$ accuracy but would miss every positive case.</p>
+</li>
+<li><p>For a response with three classes, the confusion matrix would be a $3 \times 3$ table. Rows can represent predicted classes and columns actual classes. The diagonal cells contain correct predictions, while the off-diagonal cells contain misclassifications.</p>
+</li>
+</ol>
+<table>
 <thead>
 <tr>
-<th>Metric</th>
-<th>Formula</th>
-<th style="text-align:right">Value</th>
+<th>Predicted / Actual</th>
+<th style="text-align:right">0</th>
+<th style="text-align:right">1</th>
+<th style="text-align:right">2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Accuracy</td>
-<td>$(TP + TN) / (TP + TN + FP + FN)$</td>
-<td style="text-align:right">$0.835$</td>
+<td>0</td>
+<td style="text-align:right">correct</td>
+<td style="text-align:right">error</td>
+<td style="text-align:right">error</td>
 </tr>
 <tr>
-<td>Precision</td>
-<td>$TP / (TP + FP)$</td>
-<td style="text-align:right">$0.739$</td>
+<td>1</td>
+<td style="text-align:right">error</td>
+<td style="text-align:right">correct</td>
+<td style="text-align:right">error</td>
 </tr>
 <tr>
-<td>Recall</td>
-<td>$TP / (TP + FN)$</td>
-<td style="text-align:right">$0.708$</td>
-</tr>
-<tr>
-<td>$F_1$ score</td>
-<td>$2(\mathrm{precision})(\mathrm{recall}) / (\mathrm{precision} + \mathrm{recall})$</td>
-<td style="text-align:right">$0.723$</td>
+<td>2</td>
+<td style="text-align:right">error</td>
+<td style="text-align:right">error</td>
+<td style="text-align:right">correct</td>
 </tr>
 </tbody>
 </table>
-<p>The model shows reasonable predictive performance on the test set, with $83.5%$ accuracy. Precision was $73.9%$ and recall was $70.8%$. The model missed $7$ of the $24$ positive cases, so recall is an important consideration for diabetes screening.</p>
+<ol start="3">
+<li>For diabetes screening, I would prefer more Type I errors, false positives, than Type II errors, false negatives. A false positive can be followed by additional testing, while a false negative could delay diagnosis and treatment. Therefore, reducing false negatives and maintaining high recall would be more important.</li>
+</ol>
 </div>
 </div>
 </div>
