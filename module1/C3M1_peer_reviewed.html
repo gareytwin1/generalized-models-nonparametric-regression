@@ -7827,40 +7827,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Load required libraries</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>── <span class="ansi-bold">Attaching core tidyverse packages</span> ──────────────────────── tidyverse 2.0.0 ──
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">dplyr    </span> 1.1.4     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">readr    </span> 2.1.5
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">forcats  </span> 1.0.0     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">stringr  </span> 1.5.2
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">ggplot2  </span> 3.5.2     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">tibble   </span> 3.3.0
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">lubridate</span> 1.9.4     <span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">tidyr    </span> 1.3.1
-<span class="ansi-green-fg">✔</span> <span class="ansi-blue-fg">purrr    </span> 1.1.0     
-── <span class="ansi-bold">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──
-<span class="ansi-red-fg">✖</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
-<span class="ansi-red-fg">✖</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
-<span class="ansi-cyan-fg">ℹ</span> Use the conflicted package (<span class="ansi-blue-fg">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
-</pre>
 </div>
 </div>
 </div>
@@ -7883,7 +7860,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Load the data</span>
@@ -7939,7 +7916,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Inspect the data for missing and nonsensical values</span>
@@ -7970,66 +7947,11 @@ a.anchor-link {
 
 <span class="c1"># Visualize predictors before cleaning</span>
 <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span>
+
 <span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nf">hist</span><span class="p">(</span><span class="n">pima</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">pima</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Value"</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
 
-<span class="c1"># Treat nonsensical zero values as missing and remove incomplete rows</span>
-<span class="n">pima_clean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pima</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span>
-<span class="w">    </span><span class="n">glucose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">na_if</span><span class="p">(</span><span class="n">glucose</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">diastolic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">na_if</span><span class="p">(</span><span class="n">diastolic</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">triceps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">na_if</span><span class="p">(</span><span class="n">triceps</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">insulin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">na_if</span><span class="p">(</span><span class="n">insulin</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">bmi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">na_if</span><span class="p">(</span><span class="n">bmi</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">  </span><span class="nf">drop_na</span><span class="p">()</span>
-
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nData shape after cleaning:"</span><span class="p">,</span><span class="w"> </span><span class="nf">dim</span><span class="p">(</span><span class="n">pima_clean</span><span class="p">),</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"Rows removed:"</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">pima</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">pima_clean</span><span class="p">),</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span>
-
-<span class="c1"># Split into 80% training and 20% test sets</span>
-<span class="nf">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span>
-
-<span class="n">n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">pima_clean</span><span class="p">)</span>
-<span class="n">train_indices</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="nf">seq_len</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">floor</span><span class="p">(</span><span class="m">0.8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">))</span>
-
-<span class="n">train_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pima_clean</span><span class="p">[</span><span class="n">train_indices</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
-<span class="n">test_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pima_clean</span><span class="p">[</span><span class="o">-</span><span class="n">train_indices</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
-
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nTraining set size:"</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">train_data</span><span class="p">),</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"Test set size:"</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">test_data</span><span class="p">),</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span><span class="c1"># Inspect the data for missing and nonsensical values</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"Data shape:"</span><span class="p">,</span><span class="w"> </span><span class="nf">dim</span><span class="p">(</span><span class="n">pima</span><span class="p">),</span><span class="w"> </span><span class="s">"\n"</span><span class="p">)</span>
-
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nData types:\n"</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">pima</span><span class="p">)</span>
-
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nSummary statistics:\n"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">summary</span><span class="p">(</span><span class="n">pima</span><span class="p">))</span>
-
-<span class="c1"># Check for missing values</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nMissing values per column:\n"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">colSums</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">pima</span><span class="p">)))</span>
-
-<span class="c1"># Check for zero values</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nZero counts per column:\n"</span><span class="p">)</span>
-<span class="n">zero_counts</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">colSums</span><span class="p">(</span><span class="n">pima</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">zero_counts</span><span class="p">)</span>
-
-<span class="c1"># Identify problematic zero values</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"\nIssues found:\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"- Glucose:"</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">pima</span><span class="o">$</span><span class="n">glucose</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="s">"zero values\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"- Diastolic:"</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">pima</span><span class="o">$</span><span class="n">diastolic</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="s">"zero values\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"- Triceps:"</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">pima</span><span class="o">$</span><span class="n">triceps</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="s">"zero values\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"- Insulin:"</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">pima</span><span class="o">$</span><span class="n">insulin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="s">"zero values\n"</span><span class="p">)</span>
-<span class="nf">cat</span><span class="p">(</span><span class="s">"- BMI:"</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">pima</span><span class="o">$</span><span class="n">bmi</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">),</span><span class="w"> </span><span class="s">"zero values\n"</span><span class="p">)</span>
-
-<span class="c1"># Visualize predictors before cleaning</span>
-<span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">))</span>
-<span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nf">hist</span><span class="p">(</span><span class="n">pima</span><span class="p">[,</span><span class="w"> </span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">pima</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Value"</span><span class="p">)</span>
-<span class="p">}</span>
 <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
 
 <span class="c1"># Treat nonsensical zero values as missing and remove incomplete rows</span>
@@ -8082,68 +8004,13 @@ Data types:
  $ diabetes : num  0.627 0.351 0.672 0.167 2.288 ...
  $ age      : int  50 31 32 21 33 30 26 29 53 54 ...
  $ test     : int  1 0 1 0 1 0 1 0 1 1 ...
-
-Summary statistics:
-    pregnant         glucose        diastolic         triceps     
- Min.   : 0.000   Min.   :  0.0   Min.   :  0.00   Min.   : 0.00  
- 1st Qu.: 1.000   1st Qu.: 99.0   1st Qu.: 62.00   1st Qu.: 0.00  
- Median : 3.000   Median :117.0   Median : 72.00   Median :23.00  
- Mean   : 3.845   Mean   :120.9   Mean   : 69.11   Mean   :20.54  
- 3rd Qu.: 6.000   3rd Qu.:140.2   3rd Qu.: 80.00   3rd Qu.:32.00  
- Max.   :17.000   Max.   :199.0   Max.   :122.00   Max.   :99.00  
-    insulin           bmi           diabetes           age       
- Min.   :  0.0   Min.   : 0.00   Min.   :0.0780   Min.   :21.00  
- 1st Qu.:  0.0   1st Qu.:27.30   1st Qu.:0.2437   1st Qu.:24.00  
- Median : 30.5   Median :32.00   Median :0.3725   Median :29.00  
- Mean   : 79.8   Mean   :31.99   Mean   :0.4719   Mean   :33.24  
- 3rd Qu.:127.2   3rd Qu.:36.60   3rd Qu.:0.6262   3rd Qu.:41.00  
- Max.   :846.0   Max.   :67.10   Max.   :2.4200   Max.   :81.00  
-      test      
- Min.   :0.000  
- 1st Qu.:0.000  
- Median :0.000  
- Mean   :0.349  
- 3rd Qu.:1.000  
- Max.   :1.000  
-
-Missing values per column:
- pregnant   glucose diastolic   triceps   insulin       bmi  diabetes       age 
-        0         0         0         0         0         0         0         0 
-     test 
-        0 
-
-Zero counts per column:
- pregnant   glucose diastolic   triceps   insulin       bmi  diabetes       age 
-      111         5        35       227       374        11         0         0 
-     test 
-      500 
-
-Issues found:
-- Glucose: 5 zero values
-- Diastolic: 35 zero values
-- Triceps: 227 zero values
-- Insulin: 374 zero values
-- BMI: 11 zero values
-
-Data shape after cleaning: 392 9 
-Rows removed: 376 
-
-Training set size: 313 
-Test set size: 79 
-Data shape: 768 9 
-
-Data types:
-'data.frame':	768 obs. of  9 variables:
- $ pregnant : int  6 1 8 1 0 5 3 10 2 8 ...
- $ glucose  : int  148 85 183 89 137 116 78 115 197 125 ...
- $ diastolic: int  72 66 64 66 40 74 50 0 70 96 ...
- $ triceps  : int  35 29 0 23 35 0 32 0 45 0 ...
- $ insulin  : int  0 0 0 94 168 0 88 0 543 0 ...
- $ bmi      : num  33.6 26.6 23.3 28.1 43.1 25.6 31 35.3 30.5 0 ...
- $ diabetes : num  0.627 0.351 0.672 0.167 2.288 ...
- $ age      : int  50 31 32 21 33 30 26 29 53 54 ...
- $ test     : int  1 0 1 0 1 0 1 0 1 1 ...
-
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
 Summary statistics:
     pregnant         glucose        diastolic         triceps     
  Min.   : 0.000   Min.   :  0.0   Min.   :  0.00   Min.   : 0.00  
@@ -8230,7 +8097,7 @@ Test set size: 79
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Fit a logistic (binomial) regression model on the training data</span>
@@ -8306,7 +8173,7 @@ McFadden pseudo-R-squared: 0.286
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Model-assessment">Model assessment<a class="anchor-link" href="#Model-assessment">¶</a></h3><p>I fit a binomial logistic regression using all eight predictors. The likelihood-ratio test was significant, $p &lt; 0.001$, indicating that the full model fits significantly better than an intercept-only model. McFadden's pseudo-$R^2$ was $0.286$. Test-set performance will provide a better measure of predictive performance.</p>
+<h3 id="Model-assessment">Model assessment<a class="anchor-link" href="#Model-assessment">¶</a></h3><p>I fit a binomial logistic regression using all eight predictors. The likelihood-ratio test was significant, $p &lt; 0.001$, indicating that the full model fits significantly better than an intercept-only model. McFadden's pseudo-$R^2$ was $0.286$. However, this does not establish overall goodness of fit, so test-set predictions will provide a more useful assessment of predictive performance.</p>
 </div>
 </div>
 </div>
@@ -8327,7 +8194,7 @@ McFadden pseudo-R-squared: 0.286
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Adjusted association: coefficient from the multivariable logistic model</span>
@@ -8391,7 +8258,8 @@ mean in group 0 mean in group 1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Answer">Answer<a class="anchor-link" href="#Answer">¶</a></h3><p>Diastolic blood pressure was not significant in the logistic regression, with a coefficient of $-0.0039$ and $p = 0.769$. However, women who tested positive had a higher mean diastolic blood pressure, $74.1$ mmHg versus $69.6$ mmHg, with $p = 0.002$. These results are not contradictory because the $t$-test measures the unadjusted difference between groups, while the regression measures the effect of diastolic blood pressure after controlling for the other predictors.</p>
+<h3 id="Answer">Answer<a class="anchor-link" href="#Answer">¶</a></h3><p>Diastolic blood pressure was not significant in the logistic regression, with a coefficient of $-0.0039$ and $p = 0.769$. However, women who tested positive had a higher mean diastolic blood pressure, $74.1$ mmHg versus $69.6$ mmHg, with $p = 0.002$.</p>
+<p>These results are not contradictory. The group comparison measures diastolic blood pressure conditional on test status, while the logistic regression models test status conditional on diastolic blood pressure and the other predictors. Bayes' theorem tells us these conditional relationships are not the same. After controlling for the other predictors, diastolic blood pressure does not provide a significant independent association with test status.</p>
 </div>
 </div>
 </div>
@@ -8412,7 +8280,7 @@ mean in group 0 mean in group 1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Extract and interpret the glucose coefficient from the fitted logistic model</span>
@@ -8435,7 +8303,13 @@ mean in group 0 mean in group 1
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Glucose coefficient on the log-odds scale: 0.0377 
-Odds ratio for a one-unit glucose increase: 1.0384 
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Odds ratio for a one-unit glucose increase: 1.0384 
 Percent change in odds: 3.84 %
 </pre>
 </div>
@@ -8517,7 +8391,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Predict the probability of a positive diabetes test for each held-out observation</span>
@@ -8631,7 +8505,7 @@ Predicted  0  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Extract the four confusion-matrix counts</span>
@@ -8693,26 +8567,26 @@ Predicted  0  1
 <tr>
 <td>Accuracy</td>
 <td>$(TP + TN) / (TP + TN + FP + FN)$</td>
-<td style="text-align:right">$0.835$</td>
+<td style="text-align:right">$0.873$</td>
 </tr>
 <tr>
 <td>Precision</td>
 <td>$TP / (TP + FP)$</td>
-<td style="text-align:right">$0.739$</td>
+<td style="text-align:right">$0.810$</td>
 </tr>
 <tr>
 <td>Recall</td>
 <td>$TP / (TP + FN)$</td>
-<td style="text-align:right">$0.708$</td>
+<td style="text-align:right">$0.739$</td>
 </tr>
 <tr>
 <td>$F_1$ score</td>
 <td>$2(\mathrm{precision})(\mathrm{recall}) / (\mathrm{precision} + \mathrm{recall})$</td>
-<td style="text-align:right">$0.723$</td>
+<td style="text-align:right">$0.773$</td>
 </tr>
 </tbody>
 </table>
-<p>The model shows reasonable predictive performance on the test set, with $83.5%$ accuracy. Precision was $73.9%$ and recall was $70.8%$. The model missed $7$ of the $24$ positive cases, so recall is an important consideration for diabetes screening.</p>
+<p>The model shows good predictive performance on the test set, with $87.3%$ accuracy. Precision was $81.0%$, recall was $73.9%$, and the $F_1$ score was $77.3%$. The $F_1$ score combines precision and recall into a single measure. The model missed $6$ of the $23$ positive cases, so recall remains an important consideration for diabetes screening.</p>
 </div>
 </div>
 </div>
@@ -8740,7 +8614,7 @@ Predicted  0  1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Answers">Answers<a class="anchor-link" href="#Answers">¶</a></h3><ol>
-<li><p>Accuracy can be misleading when the classes are imbalanced. For example, if only $5%$ of patients have diabetes, a model that predicts "no diabetes" for everyone would have $95%$ accuracy but would miss every positive case.</p>
+<li><p>Accuracy can be misleading when the classes are imbalanced. For example, if only $5%$ of patients have diabetes, a model that predicts "no diabetes" for everyone would have $95%$ accuracy but would miss every positive case. This is an example of the accuracy paradox, where high accuracy does not necessarily mean useful classification.</p>
 </li>
 <li><p>For a response with three classes, the confusion matrix would be a $3 \times 3$ table. Rows can represent predicted classes and columns actual classes. The diagonal cells contain correct predictions, while the off-diagonal cells contain misclassifications.</p>
 </li>
